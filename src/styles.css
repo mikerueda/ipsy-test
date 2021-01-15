@@ -1,5 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+body {
+  background-color: #111;
+  color: white;
+}
+
 .App {
-  font-family: sans-serif;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.box-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1%;
+  margin-bottom: 16px;
+}
+
+.box-nav input {
+  width: 40px;
   text-align: center;
 }
 
@@ -12,12 +32,50 @@
 }
 
 .box-item {
+  color: #333;
   box-sizing: border-box;
-  padding: 10px;
-  background: #72c7ee;
+  padding: 40px 10px 10px;
+  background: #fff;
   font-weight: bold;
   list-style: none;
   margin: 0 1% 2%;
+  position: relative;
+  overflow: hidden;
+}
+
+.box-item img {
+  position: relative;
+  z-index: 2;
+  border: 1px solid #f5e37f;
+  padding: 10px;
+}
+
+.box-item h3 {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+  margin-bottom: 8px;
+}
+
+.box-item::before {
+  content: "";
+  display: block;
+  background-color: #222;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+}
+
+.error {
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 40px;
+  border: 1px solid #f5e37f;
 }
 
 /* 1080 - 720 - mobile */
