@@ -1,0 +1,39 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.box-item {
+  box-sizing: border-box;
+  padding: 10px;
+  background: #72c7ee;
+  font-weight: bold;
+  list-style: none;
+  margin: 0 1% 2%;
+}
+
+/* 1080 - 720 - mobile */
+
+@media (min-width: 720px) {
+  .box {
+    flex-direction: row;
+  }
+
+  .box-item {
+    width: 31.333%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .box-item {
+    width: 23%;
+  }
+}
